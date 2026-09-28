@@ -90,7 +90,7 @@ project-specific `cmd/` binaries for build/serve/run.
 - **Service layout** — `service:` key, registry/config/gateway/resilience via `framework/service`; modular monolith default, opt-in extraction.
 - **Infra layout** — `infra:` key, provider-agnostic declarations under `infra/` compiled by `framework/infra` to AWS/Kubernetes.
 - **Config struct** — typed `krewire.yaml` structs loaded with `libs/config`,
-  validated with `libs/validate` (`validate:"required"` tags) and business rules in `libs/core` (`Kind`/`Workload`/`SpecID`).
+  validated with `libs/validation` (`validate:"required"` tags) and business rules in `libs/core` (`Kind`/`Workload`/`SpecID`).
 - **Exit codes** — `0` success, `1` runtime failure, `2` usage error
   (`libs/core.ExitCodeSuccess/Failure/Usage`).
 - **Control plane** — `libs/core` (declarative: business rules, workload registry) + `libs/kern` (imperative: `Kernel`/`Module`/`Registry`/`Executor`/`Supervisor`) are the ecosystem center; `framework` and `kiw` compose via `kern`.

@@ -20,7 +20,7 @@ Provision and deploy from `krewire.yaml`/`infra:` declarations. This skill cover
 
 ## 3. Schema & validation
 
-- Go structs with `validate:"required"` via `libs/validate`; common kinds share canonical schema; provider-specific fields under `provider:` namespace.
+- Go structs with `validate:"required"` via `libs/validation`; common kinds share canonical schema; provider-specific fields under `provider:` namespace.
 - Secrets are `secret.Ref` (`env:` or secrets manager ARN) — never literal; state stores only identifiers.
 
 ## 4. State, locking, plan/apply

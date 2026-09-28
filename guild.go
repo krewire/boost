@@ -32,7 +32,6 @@ func managed() []string {
 		".agents/commands",
 		".agents/skills",
 		".agents/context",
-		".agents/README.md",
 	}
 }
 

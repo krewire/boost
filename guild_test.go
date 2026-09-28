@@ -12,7 +12,6 @@ func TestTemplateEmbedded(t *testing.T) {
 	for _, want := range []string{
 		"template/AGENTS.md",
 		"template/opencode.json",
-		"template/.agents/README.md",
 		"template/.agents/agents/build.md",
 		"template/.agents/commands/kickoff.md",
 		"template/.agents/skills/project-init/SKILL.md",
