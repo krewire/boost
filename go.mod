@@ -1,4 +1,4 @@
-module github.com/krewire/guild
+module github.com/krewire/boost
 
 go 1.22
 

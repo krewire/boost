@@ -1,8 +1,8 @@
-# Krewire Guild
+# Krewire Boost
 
 A guild of AI agents tuned for the **unified Krewire framework** — one install gives any Krewire project (covering all eight kinds: `app`, `cli`, `site`, `book`, `worker`, `service`, `infra`, `kernel`) a set of agents, commands, and skills that already know the ecosystem's conventions: the full `kiw` command matrix, `krewire.yaml`-only config, spec-driven development, and quality gates.
 
-The guild is distributed as a Go module (`github.com/krewire/guild`) whose template is embedded and installed through the [`kiw` CLI](https://github.com/krewire/kiw).
+Krewire Boost is distributed as a Go module (`github.com/krewire/boost`) whose template is embedded and installed through the [`kiw` CLI](https://github.com/krewire/kiw).
 
 > Unified vision: [`KWF-M8K2Q`](../framework/docs/specs/KWF-ARCH-M8K2Q-unified-framework-vision.md)
 
@@ -29,14 +29,14 @@ The guild is distributed as a Go module (`github.com/krewire/guild`) whose templ
 Install into a target project with the kiw CLI:
 
 ```bash
-kiw guild install /path/to/your/project
+kiw boost install /path/to/your/project
 ```
 
 With no target, an interactive wizard asks where to install and confirms before
 overwriting existing managed files:
 
 ```bash
-kiw guild install
+kiw boost install
 ```
 
 Options: `--force` (overwrite without prompting) and `--dry-run` (preview
@@ -52,8 +52,8 @@ Then, in your project:
 
 ```
 .
-├── go.mod                      # github.com/krewire/guild
-├── guild.go                    # embedded template + Install library
+├── go.mod                      # github.com/krewire/boost
+├── boost.go                    # embedded template + Install library
 ├── template/                   # the installable template (source of truth)
 │   ├── AGENTS.md               # Unified Krewire constitution (8 kinds, full command matrix)
 │   ├── opencode.json           # Base opencode configuration
@@ -74,15 +74,15 @@ Then, in your project:
 ## Using as a Library
 
 ```go
-import "github.com/krewire/guild"
+import "github.com/krewire/boost"
 
-created, err := guild.Install("./my-project")
-if errors.Is(err, guild.ErrConflicts) {
-    // managed files exist; add guild.WithForce() to overwrite
+created, err := boost.Install("./my-project")
+if errors.Is(err, boost.ErrConflicts) {
+    // managed files exist; add boost.WithForce() to overwrite
 }
 ```
 
-The embedded tree is available as `guild.Template` for custom installers.
+The embedded tree is available as `boost.Template` for custom installers.
 
 ## Project Workflows
 
@@ -90,7 +90,7 @@ This template supports two workflows:
 
 **Single project** — Install directly into your project root:
 ```bash
-kiw guild install /path/to/your/project
+kiw boost install /path/to/your/project
 ```
 
 **Multi-project workspace** — Create a workspace directory with multiple projects (you choose the layout):

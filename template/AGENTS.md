@@ -65,7 +65,7 @@ project-specific `cmd/` binaries for build/serve/run.
 | `kiw fmt` | Check/format with `gofmt -l` / `go fmt ./...` (spawn Go toolchain, `--write` to fix) | all |
 | `kiw info` | Print environment and detected project kind | all |
 | `kiw version` | Print CLI and framework versions | all |
-| `kiw guild install` | Install this template | any project |
+| `kiw boost install` | Install this template | any project |
 | `kiw help <command>` | Show help for a command | all |
 | `kiw <command> help` / `kiw <command> --help` / `kiw <command> -h` | Show help for a command (aliases) | all |
 
@@ -95,7 +95,7 @@ project-specific `cmd/` binaries for build/serve/run.
   (`libs/core.ExitCodeSuccess/Failure/Usage`).
 - **Control plane** — `libs/core` (declarative: business rules, workload registry) + `libs/kern` (imperative: `Kernel`/`Module`/`Registry`/`Executor`/`Supervisor`) are the ecosystem center; `framework` and `kiw` compose via `kern`.
 - **Modules** — `github.com/krewire/framework` (unified framework: `tui`, `web`+`ssg`, `ui`, `app`, `runtime`, `worker`, `service`, `infra`), `github.com/krewire/libs` (`core`+`kern`+`config`/`validate`/`term`), `github.com/krewire/mdbind`,
-  `github.com/krewire/guild`. Cross-repo testing uses the hub `go.work`
+  `github.com/krewire/boost`. Cross-repo testing uses the hub `go.work`
   workspace; temporary `replace` directives only for single-repo clones outside
   the workspace.
 

@@ -1,8 +1,8 @@
-package guild
+package boost
 
 import "github.com/krewire/libs/core"
 
-// Version is the guild module version.
+// Version is the boost module version.
 var Version = core.MustParseVersion("0.1.0")
 
 // EcosystemRequires declares the minimum versions of other modules this version is compatible with.

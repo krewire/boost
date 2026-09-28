@@ -1,10 +1,10 @@
-// Package guild ships the Krewire Guild: a reusable AI agent setup
+// Package boost ships Krewire Boost: a reusable AI agent setup
 // (AGENTS.md, opencode.json, and a .agents/ preset) installable into any
 // software project.
 //
 // The template is embedded and exposed as Template. Install copies it into a
 // target directory, refusing to overwrite managed files unless forced.
-package guild
+package boost
 
 import (
 	"embed"
